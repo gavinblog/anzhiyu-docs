@@ -15,7 +15,7 @@ export default defineUserConfig({
   title: "安知鱼主题指南",
   description: "anzhiyu,hexo主题,anzhiyu主题,安知鱼,博客,魔改,简单的hexo主题,简洁的hexo主题,hexo",
   lang: "zh-CN",
-  base: "/docs/", // 配置更目录。/docs/
+  base: "/anzhiyu-docs/", // 配置更目录。/docs/
   head: [["link", { rel: "icon", href: "/docs/images/c192.png" }]],
   theme: defaultTheme({
     sidebarDepth: 1,
