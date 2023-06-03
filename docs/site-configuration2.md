@@ -303,623 +303,531 @@ rightside_item_order:
 标签外挂虽然能为主题带来一些额外的功能和 UI 方面的强化，但是，标签外挂也有明显的限制，使用时请留意。
 :::
 
-### Note (Bootstrap Callout)
+只需要将标签写在md文件内即可使用，详细写法请阅读[安知鱼主题标签 Tag Plugins](https://anzhiy.cn/posts/d50a.html)
 
-::: tabs#note
+## 分析统计
 
-@tab 通用配置
+::: tabs
 
-修改主题配置文件
+@tab:active 百度统计
+
+1. 登录百度统计的[官方网站](https://tongji.baidu.com/web/welcome/login?castk=LTE%3D)
+
+2. 找到你百度统计的统计代码
+
+![](https://bu.dusays.com/2023/06/02/64795c52dff22.jpg)
+
+3. 修改 `主题配置文件`
 
 ```yml
-note:
-  # Note tag style values:
-  #  - simple    bs-callout old alert style. Default.
-  #  - modern    bs-callout new (v2-v3) alert style.
-  #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
-  #  - disabled  disable all CSS styles import of note tag.
-  style: simple
-  icons: false
-  border_radius: 3
-  # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
-  # Offset also applied to label tag variables. This option can work with disabled note tag.
-  light_bg_offset: 0
+baidu_analytics: 你的代码
 ```
 
-`Note`标签外挂有两种用法。`icons`和`light_bg_offset`只对方法一生效。
+@tab 谷歌分析
 
-`fontawesome`图标需开启主题配置文件中`icons.fontawesome`
+1. 登录谷歌分析的[官方网站](https://www.google.com/analytics/)
 
-@tab 语法格式
+2. 找到你的谷歌分析的跟踪 ID
 
-`方法一`
+![](https://bu.dusays.com/2023/06/02/64795cfc15eef.jpg)
 
-```markdown
-{% note [class] [no-icon] [style] %}
-Any content (support inline tags too.io).
-{% endnote %}
+3. 修改 `主题配置文件`
+
+```yml
+google_analytics: 你的代码 # 通常以`UA-`打头
 ```
 
-`方法二`
+@tab Cloudflare
 
-```markdown
-{% note [color] [icon] [style] %}
-Any content (support inline tags too.io).
-{% endnote %}
+1. 登录 Cloudflare 分析的[官方网站](https://www.cloudflare.com/zh-tw/web-analytics/)
+2. 找到 `JavaScript 程式码片段`
+3. 找到你的 `token`
+![](https://bu.dusays.com/2023/06/02/64795d7a7776b.png)
+4. 修改 `主题配置文件`
+
+```yml
+# Cloudflare Analytics
+# https://www.cloudflare.com/zh-tw/web-analytics/
+cloudflare_analytics:
 ```
 
-@tab 配置参数
+@tab Microsoft Clarity
 
-`方法一`
+1. 登录 Clarity 的[官方网站](https://clarity.microsoft.com/)
 
-| 参数    | 用法                                                                                                |
-| :------ | :-------------------------------------------------------------------------------------------------- |
-| class   | 【可选】标识，不同的标识有不同的配色<br>（ default / primary / success / info / warning / danger ） |
-| no-icon | 【可选】不显示 icon                                                                                 |
-| style   | 【可选】可以覆盖配置中的 style<br>（simple/modern/flat/disabled）                                   |
+2. 创建 `PROJECT`
 
-`方法二`
-|参数|用法|
-|:--|:-------------|
-|class|【可选】标识，不同的标识有不同的配色<br>（ default / blue / pink / red / purple / orange / green ）|
-|no-icon|【可选】可配置自定义 icon (支持 fontawesome 图标和主题内置的阿里图标,`fontawesome`图标需开启主题配置文件中`icons.fontawesome`, 也可以配置 no-icon )|
-|style| 【可选】可以覆盖配置中的 style<br>（simple/modern/flat/disabled）|
+3. 找到你的 `ID`
 
-@tab 示例源码
+![](https://bu.dusays.com/2023/06/02/64795dd09af94.png)
 
-`方法一`
+4. 修改 `主题配置文件`
 
-1. `simple`样式
-
-```markdown
-{% note simple %}默认 提示块标签{% endnote %}
-{% note default simple %}default 提示块标签{% endnote %}
-{% note primary simple %}primary 提示块标签{% endnote %}
-{% note success simple %}success 提示块标签{% endnote %}
-{% note info simple %}info 提示块标签{% endnote %}
-{% note warning simple %}warning 提示块标签{% endnote %}
-{% note danger simple %}danger 提示块标签{% endnote %}
+```yml
+# Microsoft Clarity
+# https://clarity.microsoft.com/
+microsoft_clarity:
 ```
 
-2. `modern`样式
+## 广告
 
-```markdown
-{% note modern %}默认 提示块标签{% endnote %}
-{% note default modern %}default 提示块标签{% endnote %}
-{% note primary modern %}primary 提示块标签{% endnote %}
-{% note success modern %}success 提示块标签{% endnote %}
-{% note info modern %}info 提示块标签{% endnote %}
-{% note warning modern %}warning 提示块标签{% endnote %}
-{% note danger modern %}danger 提示块标签{% endnote %}
+::: tabs
+
+@tab:active 谷歌广告
+
+主题已集成谷歌广告（自动广告）
+
+修改 `主题配置文件`
+
+```yml
+google_adsense:
+  enable: true
+  auto_ads: true
+  js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
+  client: # 填入个人识别码
+  enable_page_level_ads: true
 ```
 
-3. `flat`样式
+![](https://bu.dusays.com/2023/06/02/64795e6fba8e3.png)
 
-```markdown
-{% note flat %}默认 提示块标签{% endnote %}
-{% note default flat %}default 提示块标签{% endnote %}
-{% note primary flat %}primary 提示块标签{% endnote %}
-{% note success flat %}success 提示块标签{% endnote %}
-{% note info flat %}info 提示块标签{% endnote %}
-{% note warning flat %}warning 提示块标签{% endnote %}
-{% note danger flat %}danger 提示块标签{% endnote %}
+@tab:active 手动广告配置
+
+主题预留了三个位置可供插入广告，分别为主页文章(每三篇文章出现广告)/aside公告之后/文章页打赏之后。
+把html代码填写到对应的位置
+
+修改 `主题配置文件`
+
+```yml
+ad:
+  index:
+  aside:
+  post:
 ```
 
-4. `disabled`样式
+例如: 
 
-```markdown
-{% note disabled %}默认 提示块标签{% endnote %}
-{% note default disabled %}default 提示块标签{% endnote %}
-{% note primary disabled %}primary 提示块标签{% endnote %}
-{% note success disabled %}success 提示块标签{% endnote %}
-{% note info disabled %}info 提示块标签{% endnote %}
-{% note warning disabled %}warning 提示块标签{% endnote %}
-{% note danger disabled %}danger 提示块标签{% endnote %}
+```yml
+index: <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="xxxxxxxxxxxx" data-ad-client="ca-pub-xxxxxxxxxx" data-ad-slot="xxxxxxxxxx"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script>
 ```
 
-5. `no-icon`样式
+## 页面加载动画 preloader
 
-```markdown
-{% note no-icon %}默认 提示块标签{% endnote %}
-{% note default no-icon %}default 提示块标签{% endnote %}
-{% note primary no-icon %}primary 提示块标签{% endnote %}
-{% note success no-icon %}success 提示块标签{% endnote %}
-{% note info no-icon %}info 提示块标签{% endnote %}
-{% note warning no-icon %}warning 提示块标签{% endnote %}
-{% note danger no-icon %}danger 提示块标签{% endnote %}
+当进入网页时，因为加载速度的问题，可能会导致 top_img 图片出现断层显示，或者网页加载不全而出现等待时间，开启preloader后，会显示加载动画，等页面加载完，加载动画会消失。
+
+主题支持 pace.js 的加载动画，具体可查看 [pace.js](https://codebyzach.github.io/pace/)
+
+修改 `主题配置文件`，其中`avatar`可以自定义加载时的头像
+
+```yml
+# Loading Animation (加载动画)
+preloader:
+  enable: true
+  # source
+  # 1. fullpage-loading
+  # 2. pace (progress bar)
+  # else all
+  source: 3
+  # pace theme (see https://codebyzach.github.io/pace/)
+  pace_css_url:
+  avatar: # 自定义头像
 ```
 
-`方法二`
 
-图标支持 `fontawesome` 和 `主题内置的阿里图标`，使用方法为加上对应的类名，`fontawesome`图标需开启主题配置文件中`icons.fontawesome`，默认未开启 fontawesome
-
-1.  simple 样式
-    `主题内置阿里图标`
-
-    ```markdown
-    {% note 'anzhiyufont anzhiyu-icon-rocket' simple %}你是刷 Visa 还是 UnionPay{% endnote %}
-    {% note blue 'anzhiyufont anzhiyu-icon-bullhorn' simple %}2022 年快到了....{% endnote %}
-    {% note pink 'anzhiyufont anzhiyu-icon-instagram' simple %}小心开车 安全至上{% endnote %}
-    {% note red 'anzhiyufont anzhiyu-icon-fan' simple%}这是三片呢？还是四片？{% endnote %}
-    {% note orange 'anzhiyufont anzhiyu-icon-dengpao' simple %}你是刷 Visa 还是 UnionPay{% endnote %}
-    {% note purple 'anzhiyufont anzhiyu-icon-sanmingzhi' simple %}剪刀石头布{% endnote %}
-    {% note green 'anzhiyufont anzhiyu-icon-ic_train' simple %}前端最讨厌的浏览器{% endnote %}
-    ```
-
-    <p><code>fontawesome 图标</code>，开启主题配置文件中的<code>icons.fontawesome</code>为<code>true</code>后可见</p>
-
-    ```markdown
-    {% note 'fab fa-cc-visa' simple %}你是刷 Visa 还是 UnionPay{% endnote %}
-    {% note blue 'fas fa-bullhorn' simple %}2022 年快到了....{% endnote %}
-    {% note pink 'fas fa-car-crash' simple %}小心开车 安全至上{% endnote %}
-    {% note red 'icon-fan' simple%}这是三片呢？还是四片？{% endnote %}
-    {% note orange 'fas fa-battery-half' simple %}你是刷 Visa 还是 UnionPay{% endnote %}
-    {% note purple 'far fa-hand-scissors' simple %}剪刀石头布{% endnote %}
-    {% note green 'fab fa-internet-explorer' simple %}前端最讨厌的浏览器{% endnote %}
-    ```
-
-2.  modern 样式
-    `主题内置阿里图标`
-
-    ```markdown
-    {% note 'anzhiyufont anzhiyu-icon-rocket' modern %}你是刷 Visa 还是 UnionPay{% endnote %}
-    {% note blue 'anzhiyufont anzhiyu-icon-bullhorn' modern %}2022 年快到了....{% endnote %}
-    {% note pink 'anzhiyufont anzhiyu-icon-instagram' modern %}小心开车 安全至上{% endnote %}
-    {% note red 'anzhiyufont anzhiyu-icon-fan' modern%}这是三片呢？还是四片？{% endnote %}
-    {% note orange 'anzhiyufont anzhiyu-icon-dengpao' modern %}你是刷 Visa 还是 UnionPay{% endnote %}
-    {% note purple 'anzhiyufont anzhiyu-icon-sanmingzhi' modern %}剪刀石头布{% endnote %}
-    {% note green 'anzhiyufont anzhiyu-icon-ic_train' modern %}前端最讨厌的浏览器{% endnote %}
-    ```
-
-    <p><code>fontawesome 图标</code>，开启主题配置文件中的<code>icons.fontawesome</code>为<code>true</code>后可见</p>
-
-    ```markdown
-    {% note 'fab fa-cc-visa' modern %}你是刷 Visa 还是 UnionPay{% endnote %}
-    {% note blue 'fas fa-bullhorn' modern %}2021 年快到了....{% endnote %}
-    {% note pink 'fas fa-car-crash' modern %}小心开车 安全至上{% endnote %}
-    {% note red 'icon-fan' modern%}这是三片呢？还是四片？{% endnote %}
-    {% note orange 'fas fa-battery-half' modern %}你是刷 Visa 还是 UnionPay{% endnote %}
-    {% note purple 'far fa-hand-scissors' modern %}剪刀石头布{% endnote %}
-    {% note green 'fab fa-internet-explorer' modern %}前端最讨厌的浏览器{% endnote %}
-    ```
-
-3.  flat 样式
-    `主题内置阿里图标`
-
-    ```markdown
-    {% note 'anzhiyufont anzhiyu-icon-rocket' flat %}你是刷 Visa 还是 UnionPay{% endnote %}
-    {% note blue 'anzhiyufont anzhiyu-icon-bullhorn' flat %}2022 年快到了....{% endnote %}
-    {% note pink 'anzhiyufont anzhiyu-icon-instagram' flat %}小心开车 安全至上{% endnote %}
-    {% note red 'anzhiyufont anzhiyu-icon-fan' flat%}这是三片呢？还是四片？{% endnote %}
-    {% note orange 'anzhiyufont anzhiyu-icon-dengpao' flat %}你是刷 Visa 还是 UnionPay{% endnote %}
-    {% note purple 'anzhiyufont anzhiyu-icon-sanmingzhi' flat %}剪刀石头布{% endnote %}
-    {% note green 'anzhiyufont anzhiyu-icon-ic_train' flat %}前端最讨厌的浏览器{% endnote %}
-    ```
-
-    <p><code>fontawesome 图标</code>，开启主题配置文件中的<code>icons.fontawesome</code>为<code>true</code>后可见</p>
-
-    ```markdown
-    {% note 'fab fa-cc-visa' flat %}你是刷 Visa 还是 UnionPay{% endnote %}
-    {% note blue 'fas fa-bullhorn' flat %}2021 年快到了....{% endnote %}
-    {% note pink 'fas fa-car-crash' flat %}小心开车 安全至上{% endnote %}
-    {% note red 'icon-fan' flat%}这是三片呢？还是四片？{% endnote %}
-    {% note orange 'fas fa-battery-half' flat %}你是刷 Visa 还是 UnionPay{% endnote %}
-    {% note purple 'far fa-hand-scissors' flat %}剪刀石头布{% endnote %}
-    {% note green 'fab fa-internet-explorer' flat %}前端最讨厌的浏览器{% endnote %}
-    ```
-
-4.  disabled 样式
-    `主题内置阿里图标`
-
-    ```markdown
-    {% note 'anzhiyufont anzhiyu-icon-rocket' disabled %}你是刷 Visa 还是 UnionPay{% endnote %}
-    {% note blue 'anzhiyufont anzhiyu-icon-bullhorn' disabled %}2022 年快到了....{% endnote %}
-    {% note pink 'anzhiyufont anzhiyu-icon-instagram' disabled %}小心开车 安全至上{% endnote %}
-    {% note red 'anzhiyufont anzhiyu-icon-fan' disabled%}这是三片呢？还是四片？{% endnote %}
-    {% note orange 'anzhiyufont anzhiyu-icon-dengpao' disabled %}你是刷 Visa 还是 UnionPay{% endnote %}
-    {% note purple 'anzhiyufont anzhiyu-icon-sanmingzhi' disabled %}剪刀石头布{% endnote %}
-    {% note green 'anzhiyufont anzhiyu-icon-ic_train' disabled %}前端最讨厌的浏览器{% endnote %}
-    ```
-
-    <p><code>fontawesome 图标</code>，开启主题配置文件中的<code>icons.fontawesome</code>为<code>true</code>后可见</p>
-
-    ```markdown
-    {% note 'fab fa-cc-visa' disabled %}你是刷 Visa 还是 UnionPay{% endnote %}
-    {% note blue 'fas fa-bullhorn' disabled %}2021 年快到了....{% endnote %}
-    {% note pink 'fas fa-car-crash' disabled %}小心开车 安全至上{% endnote %}
-    {% note red 'icon-fan' disabled %}这是三片呢？还是四片？{% endnote %}
-    {% note orange 'fas fa-battery-half' disabled %}你是刷 Visa 还是 UnionPay{% endnote %}
-    {% note purple 'far fa-hand-scissors' disabled %}剪刀石头布{% endnote %}
-    {% note green 'fab fa-internet-explorer' disabled %}前端最讨厌的浏览器{% endnote %}
-    ```
-
-5.  no-icon 样式
-    ```markdown
-    {% note no-icon %}你是刷 Visa 还是 UnionPay{% endnote %}
-    {% note blue no-icon %}2021 年快到了....{% endnote %}
-    {% note pink no-icon %}小心开车 安全至上{% endnote %}
-    {% note red no-icon %}这是三片呢？还是四片？{% endnote %}
-    {% note orange no-icon %}你是刷 Visa 还是 UnionPay{% endnote %}
-    {% note purple no-icon %}剪刀石头布{% endnote %}
-    {% note green no-icon %}前端最讨厌的浏览器{% endnote %}
-    ```
-
-:::
-
-### Gallery 相册图库
-
-一个图库集合。
-
-::: tabs#gallery
-
-@tab 标签语法
-
-gallerygroup 相册图库
-
-```markdown
-<div class="gallery-group-main">
-{% galleryGroup name description link img-url %}
-{% galleryGroup name description link img-url %}
-{% galleryGroup name description link img-url %}
-</div>
-```
-
-@tab 参数配置
-
-- gallerygroup 相册图库
-
-  | 参数名      | 释义                 |
-  | :---------- | :------------------- |
-  | name        | 图库名字             |
-  | description | 图库描述             |
-  | link        | 链接到对应相册的地址 |
-  | img-url     | 图库封面             |
-
-- gallery 相册
-  区别于旧版的 Gallery 相册,新的 Gallery 相册会自动根据图片长度进行排版，书写也更加方便，与 markdown 格式一样。可根据需要插入到相应的 md。无需再自己配置长宽。**建议在粘贴时故意使用长短、大小、横竖不一的图片**，会有更好的效果。（尺寸完全相同的图片只会平铺输出，效果很糟糕）
-
-::: info
-思维拓展一下，相册图库的实质其实就是个快捷方式，可以自定义添加描述、封面、链接。那么我们未必要把它当做一个相册，完全可以作为一个链接卡片，链接到视频、QQ、友链都是不错的选择。
-@tab 本地
-
-```markdown
-{% gallery %}
-markdown 图片格式
-{% endgallery %}
-
-{% gallery true,220,10 %}
-markdown 图片格式
-{% endgallery %}
-
-{% gallery true,,10 %}
-markdown 图片格式
-{% endgallery %}
-```
-
-| 参数名    | 释义                                                                                 |
-| --------- | ------------------------------------------------------------------------------------ |
-| lazyload  | 【可选】点击按钮加载更多图片，填写 true/false。默认为 `false`。                      |
-| rowHeight | 【可选】图片显示的高度，如果需要一行显示更多的图片，可设置更小的数字。默认为 `220`。 |
-| limit     | 【可选】每次加载多少张照片。默认为 `10`。                                            |
-
-@tab 远程
-
-```markdown
-{% gallery url,[link],[lazyload],[rowHeight],[limit] %}
-{% endgallery %}
-```
-
-| 参数名    | 释义                                                                                 |
-| --------- | ------------------------------------------------------------------------------------ |
-| url       | 【必须】 识别词                                                                      |
-| link      | 【必须】远程的 json 链接                                                             |
-| lazyload  | 【可选】点击按钮加载更多图片，填写 true/false。默认为 `false`。                      |
-| rowHeight | 【可选】图片显示的高度，如果需要一行显示更多的图片，可设置更小的数字。默认为 `220`。 |
-| limit     | 【可选】每次加载多少张照片。默认为 `10`。                                            |
-
-> 远程链接 Json 的例子
-
-有三个参数，`url`是必须存在的，`alt` 和 `title` 可有，也可没有。
-
-```json
-[
-  {
-    "url": "https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/IMG_0556.jpg",
-    "alt": "IMG_0556.jpg",
-    "title": "这是title"
-  },
-  {
-    "url": "https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/IMG_0472.jpg",
-    "alt": "IMG_0472.jpg"
-  },
-  {
-    "url": "https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/IMG_0453.jpg",
-    "alt": ""
-  },
-  {
-    "url": "https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/IMG_0931.jpg",
-    "alt": ""
-  }
-]
-```
-
-> 示例
-
-```markdown
-{% gallery url,https://xxxx.com/sss.json %}
-{% endgallery %}
-
-{% gallery url,https://xxxx.com/sss.json,true,220,10 %}
-{% endgallery %}
-
-{% gallery url,https://xxxx.com/sss.json,true,,10 %}
-{% endgallery %}
-```
-
-@tab 示例源码
-
-1. gallerygroup 相册图库
-
-   ```markdown
-   <div class="gallery-group-main">
-   {% galleryGroup MC 在Rikkaの六花服务器里留下的足迹 '/gallery/MC/' https://cdn.cbd.int/akilar-candyassets@1.0.36/image/1.jpg %}
-   {% galleryGroup Gundam 哦咧哇gundam哒！ '/gallery/Gundam/' https://cdn.cbd.int/akilar-candyassets@1.0.36/image/20200907110508327.png %}
-   {% galleryGroup I-am-Akilar 某种意义上也算自拍吧 '/gallery/I-am-Akilar/' https://cdn.cbd.int/akilar-candyassets@1.0.36/image/20200907113116651.png %}
-   </div>
-   ```
-
-2. gallery 相册
-
-   ```markdown
-   {% gallery true,,2 %}
-   ![](https://i.loli.net/2019/12/25/Fze9jchtnyJXMHN.jpg)
-   ![](https://i.loli.net/2019/12/25/ryLVePaqkYm4TEK.jpg)
-   ![](https://i.loli.net/2019/12/25/gEy5Zc1Ai6VuO4N.jpg)
-   ![](https://i.loli.net/2019/12/25/d6QHbytlSYO4FBG.jpg)
-   ![](https://i.loli.net/2019/12/25/6nepIJ1xTgufatZ.jpg)
-   ![](https://i.loli.net/2019/12/25/E7Jvr4eIPwUNmzq.jpg)
-   ![](https://i.loli.net/2019/12/25/mh19anwBSWIkGlH.jpg)
-   ![](https://i.loli.net/2019/12/25/2tu9JC8ewpBFagv.jpg)
-   {% endgallery %}
-   ```
-
-::: info
-对于很多同学提问的`gallerygroup`和`gallery`相册页的链接问题。这里说下我个人的使用习惯。
-一般使用相册图库的话，可以在导航栏加一个 gallery 的 page(**使用指令`hexo new page gallery`添加**)，里面放相册图库作为封面。然后在`[Blogroot]/source/gallery/`下面建立相应的文件夹，例如若按照这里的示例，若欲使用`/gallery/MC/`路径访问 MC 相册，则需要新建`[Blogroot]/source/gallery/MC/index.md`，并在里面填入`gallery`相册内容。
-
-注意 ⚠️：本站相册集为单独优化，可参考[配置相册页面](https://anzhiy.cn/posts/220c.html)。
-:::
-
-### tag-hide
+## 图片大图查看模式
 
 ::: warning 警告
-请注意，tag-hide 内的标签外挂 content 内都不建议有 h1 - h6 等标题。因为 Toc 会把隐藏内容标题也显示出来，而且当滚动屏幕时，如果隐藏内容没有显示出来，会导致 Toc 的滚动出现异常。
+如果你并不想为某张图片添加大图查看模式，你可以使用 html 格式引用图片，併为图片添加 no-lightbox class 名。
 :::
 
-如果你想把一些文字、内容隐藏起来，并提供按钮让用户点击显示。可以使用这个标签外挂。
+::: tabs
 
-::: tabs#tag-hide
+@tab:active fancybox
 
-@tab inline
+修改 `主题配置文件`
 
-`inline` 在文本里面添加按钮隐藏内容，只限文字
-
-( content 不能包含英文逗号，可用`&sbquo;`)
-
-```MARKDOWN
-{% hideInline content,display,bg,color %}
+```yml
+# fancybox http://fancyapps.com/fancybox/3/
+fancybox: true
 ```
 
-- content: 文本内容
+@tab medium_zoom
 
-- display: 按钮显示的文字(可选)
+修改 `主题配置文件`
 
-- bg: 按钮的背景颜色(可选)
-
-- color: 按钮文字的颜色(可选)
-
-> 示例代码
-
-```MARKDOWN
-哪个英文字母最酷？ {% hideInline 因为西装裤(C装酷),查看答案,#FF7242,#fff %}
-门里站着一个人? {% hideInline 闪 %}
-```
-
-@tab block
-`block` 独立的 block 隐藏内容，可以隐藏很多内容，包括图片，代码块等等
-( content 不能包含英文逗号，可用`&sbquo;`)
-
-```MARKDOWN
-{% hideBlock display,bg,color %}
-content
-{% endhideBlock %}
-```
-
-- content: 文本内容
-- display: 按钮显示的文字(可选)
-- bg: 按钮的背景颜色(可选)
-- color: 按钮文字的颜色(可选)
-
-> 示例代码
-
-```MARKDOWN
-查看答案
-{% hideBlock 查看答案 %}
-傻子，怎么可能有答案
-{% endhideBlock %}
-```
-
-@tab hideToggle
-如果你需要展示的内容太多，可以把它隐藏在收缩框里，需要时再把它展开。
-
-( display 不能包含英文逗号，可用`&sbquo;`)
-
-```MARKDOWN
-{% hideToggle display,bg,color %}
-content
-{% endhideToggle %}
-```
-
-示例代码
-
-```MARKDOWN
-{% hideToggle Butterfly安装方法 %}
-在你的博客根目录里
-
-git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/Butterfly
-
-如果想要安装比较新的dev分支，可以
-
-git clone -b dev https://github.com/jerryc127/hexo-theme-butterfly.git themes/Butterfly
-
-{% endhideToggle %}
+```yml
+medium_zoom: true
 ```
 
 :::
+## Pjax
 
-### 分栏 Tabs
+当用户点击链接，通过ajax更新页面需要变化的部分，然后使用HTML5的pushState修改浏览器的URL地址。
 
-使用方法
+这样可以不用重复加载相同的资源（css/js）， 从而提升网页的加载速度。
 
-::: tabs#Tabs
 
-@tab 标签语法
 
-```markdown
-{% tabs Unique name, [index] %}
-
-<!-- tab [Tab caption] [@icon] -->
-
-Any content (support inline tags too).
-
-<!-- endtab -->
-
-{% endtabs %}
+```yml
+# Pjax [Beta]
+# It may contain bugs and unstable, give feedback when you find the bugs.
+# https://github.com/MoOx/pjax
+pjax: 
+  enable: true
+  exclude:
+    - /music/
+    - /no-pjax/
 ```
 
-@tab 配置参数
+::: info 提示
+对于一些第三方插件，有些并不支持 pjax 。
+你可以把网页加入到 exclude 里，这个网页会被 pjax 排除在外。
+点击该网页会重新加载网站
 
-1. Unique name :
-   - 选项卡块标签的唯一名称，不带逗号。
-   - 将在#id 中用作每个标签及其索引号的前缀。
-   - 如果名称中包含空格，则对于生成#id，所有空格将由破折号代替。
-   - 仅当前帖子/页面的 URL 必须是唯一的！
-2. [index]:
-   - 活动选项卡的索引号。
-   - 如果未指定，将选择第一个标签（1）。
-   - 如果 index 为-1，则不会选择任何选项卡。
-   - 可选参数。
-3. [Tab caption]:
-   - 当前选项卡的标题。
-   - 如果未指定标题，则带有制表符索引后缀的唯一名称将用作制表符的标题。
-   - 如果未指定标题，但指定了图标，则标题将为空。
-   - 可选参数。
-4. [@icon]: - FontAwesome 图标名称（全名，看起来像“ fas fa-font”） - 可以指定带空格或不带空格； - 例如'Tab caption @icon' 和 'Tab caption@icon'. - 可选参数。
-
-@tab:active 示例源码
-
-> Demo 1 - 预设选择第一个【默认】
-
-```markdown
-{% tabs test1 %}
-
-<!-- tab -->
-
-**This is Tab 1.**
-
-<!-- endtab -->
-
-<!-- tab -->
-
-**This is Tab 2.**
-
-<!-- endtab -->
-
-<!-- tab -->
-
-**This is Tab 3.**
-
-<!-- endtab -->
-
-{% endtabs %}
-```
-
-> Demo 2 - 预设选择 tabs
-
-```markdown
-{% tabs test2, 3 %}
-
-<!-- tab -->
-
-**This is Tab 1.**
-
-<!-- endtab -->
-
-<!-- tab -->
-
-**This is Tab 2.**
-
-<!-- endtab -->
-
-<!-- tab -->
-
-**This is Tab 3.**
-
-<!-- endtab -->
-
-{% endtabs %}
-```
-
-> Demo 3 - 没有预设值
-
-```markdown
-{% tabs test3, -1 %}
-
-<!-- tab -->
-
-**This is Tab 1.**
-
-<!-- endtab -->
-
-<!-- tab -->
-
-**This is Tab 2.**
-
-<!-- endtab -->
-
-<!-- tab -->
-
-**This is Tab 3.**
-
-<!-- endtab -->
-
-{% endtabs %}
-```
-
-> Demo 4 - 自定义 Tab 名 + 只有 icon + icon 和 Tab 名
-
-```markdown
-{% tabs test4 %}
-
-<!-- tab 第一个Tab -->
-
-**tab 名字为第一个 Tab**
-
-<!-- endtab -->
-
-<!-- tab @fab fa-apple-pay -->
-
-**只有图标 没有 Tab 名字**
-
-<!-- endtab -->
-
-<!-- tab 炸弹@fas fa-bomb -->
-
-**名字+icon**
-
-<!-- endtab -->
-
-{% endtabs %}
-```
-
+使用pjax后，一些自己DIY的js可能会无效，跳转页面时需要重新调用，请参考[Pjax文档](https://github.com/MoOx/pjax)
+使用pjax后，一些个别页面加载的js/css，将会改为所有页面都加载
 :::
+
+
+::: warning 警告
+
+主题默认开启Pjax，大量服务依赖于pjax，关闭可能会造成破坏性问题。
+
+安知鱼主题的的Pjax目前仍有一些问题，请留意
+
+使用谷歌广告可能会报错（例如自动广告）
+如果你在使用中发现问题，欢迎反馈Bugs
+:::
+
+## Snackbar 弹窗
+
+Snackbar 弹窗,根据自己爱好开启
+
+修改 `主题配置文件`
+
+```yml
+# Snackbar 弹窗
+# https://github.com/polonel/SnackBar
+# position 弹窗位置
+# 可选 top-left / top-center / top-right / bottom-left / bottom-center / bottom-right
+snackbar:
+  enable: true
+  position: bottom-left
+  bg_light: '#49b1f5' #light mode时弹窗背景
+  bg_dark: '#2d3035' #dark mode时弹窗背景
+```
+## Pangu
+
+> 如果你跟我一样，每次看到网页上的中文字和英文、数字、符号挤在一块，就会坐立难安，忍不住想在它们之间加个空格。这个外挂正是你在网路世界走跳所需要的东西，它会自动替你在网页中所有的中文字和半形的英文、数字、符号之间插入空白。
+
+修改 `主题配置文件`
+
+```yml
+# https://github.com/vinta/pangu.js
+# Insert a space between Chinese character and English character (中英文之间添加空格)
+pangu:
+  enable: false
+  field: post # site/post
+```
+
+`field`只支持两个参数，`post`(只在文章页生效)和`site`(全站生效)
+
+## PWA
+
+要为AnZhiYu配上 PWA 特性, 你需要如下几个步骤:
+
+1. 打开 hexo 工作目录
+
+2. `npm install hexo-offline --save` 或者 `yarn add hexo-offline`
+
+3. 在根目录创建 `hexo-offline.config.cjs` 文件，并增加以下内容。
+
+```cjs
+// offline config passed to workbox-build.
+module.exports = {
+  globPatterns: ["css/*.css", "404.html", "js/**", "anzhiyu/random.js", "img/**", "manifest.json"],
+  // 静态文件合集，如果你的站点使用了例如 webp 格式的文件，请将文件类型添加进去。
+  globDirectory: "public",
+  swDest: "public/service-worker.js",
+  maximumFileSizeToCacheInBytes: 10485760, // 缓存的最大文件大小，以字节为单位。
+  skipWaiting: true,
+  clientsClaim: true,
+  runtimeCaching: [
+    // 如果你需要加载 CDN 资源，请配置该选项，如果没有，可以不配置。
+    // CDNs - should be CacheFirst, since they should be used specific versions so should not change
+    {
+      urlPattern: /^https:\/\/npm\.elemecdn\.com\/anzhiyu-blog/, // 缓存elmentcdn
+      handler: "CacheFirst",
+    },
+  ],
+  manifestTransforms: [
+    async (manifestEntries, compilation) => {
+      const timestamp = new Date().toISOString().replace(/[-:.TZ]/g, ""); // 获取当前时间戳
+      manifestEntries.push(
+        {
+          url: "/",
+          revision: `index-${timestamp}`,
+        },
+        {
+          url: "music/",
+          revision: `music-${timestamp}`,
+        },
+        {
+          url: "about/",
+          revision: `about-${timestamp}`,
+        }
+      );
+      return { manifest: manifestEntries };
+    },
+  ],
+};
+```
+
+更多内容请查看 [hexo-offline](https://github.com/JLHwung/hexo-offline) 的官方文档
+
+4. 在`主题配置文件`中开启 pwa 选项。
+
+```yml
+# PWA
+# See https://github.com/JLHwung/hexo-offline
+# ---------------
+pwa:
+  enable: true
+  startup_image_enable: true
+  manifest: /manifest.json
+  theme_color: var(--anzhiyu-main)
+  mask_icon: /img/siteicon/apple-icon-180.png
+  apple_touch_icon: /img/siteicon/apple-icon-180.png
+  bookmark_icon: /img/siteicon/apple-icon-180.png
+  favicon_32_32: /img/siteicon/32.png
+  favicon_16_16: /img/siteicon/16.png
+```
+
+5. 在创建`source/`目录中创建`manifest.json`文件。
+
+```json
+{
+  "name": "安知鱼`Blog",
+  "short_name": "安知鱼",
+  "theme_color": "#3b70fc",
+  "background_color": "#3b70fc",
+  "display": "fullscreen",
+  "scope": "/",
+  "start_url": "/",
+  "id": "/",
+  "icons": [
+    {
+      "src": "img/siteicon/manifest-icon-192.maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "img/siteicon/manifest-icon-192.maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "img/siteicon/manifest-icon-512.maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "img/siteicon/manifest-icon-512.maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "splash_pages": null
+}
+```
+
+你也可以通过 [Web App Manifest](https://app-manifest.firebaseapp.com/) 快速创建`manifest.json`。（Web App Manifest 要求至少包含一个 512*512 像素的图标）
+
+6. 可以通过`Chrome`插件`Lighthouse`检查 PWA 配置是否生效以及配置是否正确。
+  - 打开博客页面
+  - 启动`Lighthouse`插件 (Lighthouse插件要求至少包含一个 512*512 像素的图标)
+ 
+关于 PWA（渐进式增强 Web 应用）的更多内容请参考 [Google Tools for Web Developers](https://developers.google.com/web/tools/lighthouse/audits/address-bar)
+
+7. 生成pwa启动图
+  - 安装 `npm install pwa-asset-generator`
+  - hexo根目录执行`hexo g`
+  - 执行`npx pwa-asset-generator ./public/img/512.png ./public/img/siteicon --padding "calc(50vh - 20%) calc(50vw - 40%)" -s false -h true`，这条命令会使用`themes/source/img/512.png`这张图片来生成siteicon到目录`/public/img/siteicon`中，由于`hexo cl`会清除`/public`目录中的文件，所以每次`hexo d`之前都需要执行，如果不想每次`hexo d`之前都执行的话，可以将主题中的`themes/source/img/512.png`图片复制移动到`根目录/source/img`中，然后将生成后的`/public/img/siteicon`文件夹复制到`根目录/source/img`中，这样`根目录/source/img`中就会一直有`siteicon`，以后执行`hexo g`时，也会将`siteicon`生成到`public`目录中。
+## Open Graph
+
+在 `head` 里增加一些 meta 资料，例如缩略图、标题、时间等等。当你分享网页到一些平台时，平台会读取 Open Graph 的内容，展示缩略图，标题等等信息。
+
+修改 `主题配置文件`
+
+```yml
+# Open graph meta tags
+# https://developers.facebook.com/docs/sharing/webmasters/
+Open_Graph_meta:
+  enable: true
+  option:
+    # twitter_card:
+    # twitter_image:
+    # twitter_id:
+    # twitter_site:
+    # google_plus:
+    # fb_admins:
+    # fb_app_id:
+```
+
+## CSS 前缀
+
+有些 CSS 并不是所有浏览器都支持，需要增加对应的前缀才会生效。
+
+开启 `css_prefix` 后，会自动为一些 CSS 增加前缀。（会增加 20%的体积）
+
+修改 `主题配置文件`
+
+```yml
+# Add the vendor prefixes to ensure compatibility
+css_prefix: true
+```
+
+## Inject
+
+如想添加额外的js/css/meta等等东西，可以在Inject里添加，支持添加到head(`</body>`标签之前)和bottom(`</html>`标签之前)。
+
+请注意：以标准的html格式添加内容
+
+```yml
+inject:
+  head:
+  	- <link rel="stylesheet" href="/self.css">
+  bottom:
+  	- <script src="xxxx"></script>
+```
+留意: 如果你的网站根目录不是'/',使用本地图片时，需加上你的根目录。
+
+例如：网站是 `https://yoursite.com/blog,引用css/xx.css`，则设置为`<link rel="stylesheet" href="/blog/css/xx.css">`
+
+## CDN
+配置文件中最后一部分CDN，里面是主题所引用到的文件，可自行配置CDN。（非必要请勿修改，配置后请确认链接是否能访问）
+
+```yml
+
+# CDN
+# Don't modify the following settings unless you know how they work
+# 非必要请不要修改
+CDN:
+  # The CDN provider of internal scripts (主题内部 js 的 cdn 配置)
+  # option: local/elemecdn/jsdelivr/unpkg/cdnjs/custom
+  # Dev version can only choose. ( dev版的主题只能设置为 local )
+  internal_provider: elemecdn
+
+  # The CDN provider of third party scripts (第三方 js 的 cdn 配置)
+  # option: elemecdn/jsdelivr/unpkg/cdnjs/custom
+  third_party_provider: elemecdn
+
+  # Add version number to CDN, true or false
+  version: true
+
+  # Custom format
+  # For example: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
+  custom_format: https://npm.elemecdn.com/${name}@latest/${file}
+
+  option:
+    # main_css:
+    # main:
+    # utils:
+    # translate:
+    # local_search:
+    # algolia_js:
+    # algolia_search_v4:
+    # instantsearch_v4:
+    # pjax:
+    # blueimp_md5:
+    # valine:
+    # twikoo:
+    # waline_js:
+    # waline_css:
+    # sharejs:
+    # sharejs_css:
+    # mathjax:
+    # katex:
+    # katex_copytex:
+    # mermaid:
+    # canvas_ribbon:
+    # canvas_fluttering_ribbon:
+    # canvas_nest:
+    # lazyload:
+    # instantpage:
+    # typed:
+    # pangu:
+    # fancybox_css_v4:
+    # fancybox_v4:
+    # medium_zoom:
+    # snackbar_css:
+    # snackbar:
+    # activate_power_mode:
+    # fireworks:
+    # click_heart:
+    # ClickShowText:
+    # fontawesome:
+    # flickr_justified_gallery_js:
+    # flickr_justified_gallery_css:
+    # aplayer_css:
+    # aplayer_js:
+    # meting_js:
+    # meting_api:
+    # prismjs_js:
+    # prismjs_lineNumber_js:
+    # prismjs_autoloader:
+    # artalk_js:
+    # artalk_css:
+    # pace_js:
+    # pace_default_css:
+    # countup_js:
+    # gsap_js:
+    # busuanzi:
+    # rightmenu:
+    # waterfall:
+    # ali_iconfont_css:
+```
+| 参数                 | 解释                                                         |
+| -------------------- | ------------------------------------------------------------ |
+| internal_provider    | 主题内部文件<br/>可选 local/jsdelivr/unpkg/cdnjs/custom<br/>lcoal 为本地加载，custom 为自定义格式，需配置 `custom_format`<br/>**注意**: 如果使用的是 Dev 版，只能设置为 local |
+| third_party_provider | 第三方文件<br/>可选 local/jsdelivr/unpkg/cdnjs/custom<br/>lcoal 为本地加载，custom 为自定义格式，需配置 custom_format<br/>**注意**: 如果你选择 local 则需要自行将文件都下载至本地，并修改对应的选项，否则会报错。 |
+| version              | true/false 为 cdn 加上指定版本号                             |
+| custom_format        | 自定义格式                                                   |
+| option               | 你可以在这里更换部分文件,会覆盖原有的配置                    |
+
+
+### version
+
+如需修改版本号，可修改`主题目录`的 'plugins.yml' 中对应插件的 version
+
+请确保你修改的版本号，你所使用的 cdn 有收录
+
+### custom_format
+提供以下参数
+
+| 参数                 | 解释                                                         |
+| -------------------- | ------------------------------------------------------------ |
+| name    | npm 上的包名 |
+| file | npm 上的文件路径 |
+| min_file              | cdnjs 上的包名                |
+| cdnjs_file        | cdnjs 上的文件路径                                              |
+| min_cdnjs_file               | cdnjs 上的文件路径（压缩过的文件）                    |
+| version               | 插件版本号                   |
+	
+部分可用的第三方 CDN 列表
+
+> 请确保你选择的 CDN 有收录主题使用的第三方插件
+
+| 提供商               | 格式                                                         | 备注       |
+| -------------------- | ------------------------------------------------------------ | ---------- |
+| [Staticfile（七牛云）](https://www.staticfile.org/) | https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file} | 同步 cdnjs |
+| [BootCDN](https://www.bootcdn.cn/)              | https://cdn.bootcdn.net/ajax/libs/${cdnjs_name}/${version}/${min_cdnjs_file} | 同步 cdnjs |
+| [Baomitu（360）](https://cdn.baomitu.com/)       | 最新版本： https://lib.baomitu.com/${cdnjs_name}/latest/${min_cdnjs_file}<br />指定版本： https://lib.baomitu.com/${cdnjs_name}/${version}/${min_cdnjs_file} | 同步 cdnjs |
+| Elemecdn             | 最新版本： https://npm.elemecdn.com/${name}@latest/${file}<br />指定版本： https://npm.elemecdn.com/${name}@${version}/${file} | 同步 npm   |
+
+	
+	
+	
