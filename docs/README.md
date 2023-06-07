@@ -1,7 +1,8 @@
 ## 预览
 
 [文档预览地址](https://gavinblog.github.io/anzhiyu-docs/)
-[播客预览地址](https://hexo.geekswg.top/)
+
+[博客预览地址](https://hexo.geekswg.top/)
 
 ## 特色
 
