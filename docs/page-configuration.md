@@ -5,8 +5,8 @@ description: 安知鱼主题页面配置
 ---
 
 ::: warning 警告
-本教程更新于 2023 年 5 月 22 日，教程的内容针对最新的 anzhiyu 主题(如果你是旧版本，教程会有出入，请留意)
-🐟 安知鱼 已经更新到 [1.2.1](https://github.com/anzhiyu-c/hexo-theme-anzhiyu/releases/tag/1.2.1)
+本教程更新于 2023 年 7 月 5 日，教程的内容针对最新的 anzhiyu 主题(如果你是旧版本，教程会有出入，请留意)
+🐟 安知鱼 已经更新到 [1.4.0](https://github.com/anzhiyu-c/hexo-theme-anzhiyu/releases/tag/1.4.0)
 :::
 
 ## Front-matter 的基本认识
@@ -287,7 +287,7 @@ top_img: false
   buttonLink: /about/
   limit: 30
   home_essay: true
-  top_background: https://img02.anheyu.com/adminuploads/1/2022/08/21/630249e2df20f.jpg
+  top_background: https://bu.dusays.com/2023/06/15/648af1d5e6f39.jpeg
   essay_list:
     - content: 音乐支持了参数设置自定义歌单
       date: 2023/01/02
@@ -543,16 +543,16 @@ menu:
     title: 无限进步
     item:
       - EDU,软件工程专业
-    img: https://img02.anheyu.com/adminuploads/1/2022/09/26/6330e9bcc39cc.png
+    img: https://bu.dusays.com/2023/04/21/644287166329b.png
   statistic:
     link: /archives
     text: 文章隧道
-    cover: https://img02.anheyu.com/adminuploads/1/2022/09/23/632d634f8376d.jpg
+    cover: https://bu.dusays.com/2023/05/01/644f4b037b930.jpg
   map:
     title: 我现在住在
     StrengthenTitle: 中国，长沙市
-    background: https://img02.anheyu.com/adminuploads/1/2022/09/24/632e6f48981d8.jpg
-    backgroundDark: https://img02.anheyu.com/adminuploads/1/2022/09/26/6330ebf1f3e65.jpg
+    background: https://bu.dusays.com/2023/07/05/64a4c61cb20ef.jpg
+    backgroundDark: https://bu.dusays.com/2023/07/05/64a4c63495ac5.jpg
   selfInfo:
     selfInfoTips1: 生于
     selfInfoContentYear: 2002
@@ -563,7 +563,7 @@ menu:
   personalities:
     author_name: 执政官
     personality_type: ESFJ-A
-    photo_url: https://img02.anheyu.com/adminuploads/1/2022/09/24/632e9643611ec.jpg
+    photo_url: https://bu.dusays.com/2023/07/05/64a4c63495ac5.jpg
     personality_img: https://npm.elemecdn.com/anzhiyu-blog@2.0.8/img/svg/ESFJ-A.svg
     name_url: https://www.16personalities.com/ch/esfj-%E4%BA%BA%E6%A0%BC
   maxim:
@@ -578,30 +578,30 @@ menu:
     game_tips: 爱好游戏
     game_title: 原神
     game_uid: "UID: 125766904"
-    game_bg: https://img02.anheyu.com/adminuploads/1/2022/12/19/63a079ca63c8a.webp
+    game_bg: https://bu.dusays.com/2023/04/22/64433bf26e25d.webp
   comic:
     comic_tips: 爱好番剧
     comic_title: 追番
     comic_list:
       - name: 约定的梦幻岛
         href: https://www.bilibili.com/bangumi/media/md5267750/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://img02.anheyu.com/adminuploads/1/2022/12/13/63988658aa1b1.webp
+        cover: https://bu.dusays.com/2023/05/27/647166c44b414.webp
       - name: 咒术回战
         href: https://www.bilibili.com/bangumi/media/md28229899/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://img02.anheyu.com/adminuploads/1/2022/12/13/6398864e572ed.webp
+        cover: https://bu.dusays.com/2023/05/24/646db4398832e.webp
       - name: 紫罗兰永恒花园
         href: https://www.bilibili.com/bangumi/media/md8892/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://img02.anheyu.com/adminuploads/1/2022/12/13/639886315d658.webp
+        cover: https://bu.dusays.com/2023/05/24/646db43983d99.webp
       - name: 鬼灭之刃
         href: https://www.bilibili.com/bangumi/media/md22718131/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://img02.anheyu.com/adminuploads/1/2022/12/13/639886403d472.webp
+        cover: https://bu.dusays.com/2023/05/24/646db439856a0.webp
       - name: JOJO的奇妙冒险 黄金之风
         href: https://www.bilibili.com/bangumi/media/md135652/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://img02.anheyu.com/adminuploads/1/2022/12/13/6398862649585.webp
+        cover: https://bu.dusays.com/2023/05/30/64760e38d651a.webp
   like:
     like_tips: 关注偏好
     like_title: 数码科技
-    like_bg: https://img02.anheyu.com/adminuploads/1/2022/09/24/632f0dd8f33c6.webp
+    like_bg: https://bu.dusays.com/2022/12/06/638f5f05ce1f7.jpg
     like_bottom: 手机、电脑软硬件
   music:
     music_tips: 音乐偏好
@@ -1348,3 +1348,109 @@ envelope_comment:
 ```
 
 ![留言板](https://img02.anheyu.com/adminuploads/1/2023/04/09/643264eb13666.png!blogimg)
+
+## 我的装备页面
+
+
+1. 前往你的 Hexo 博客的根目录
+
+2. 在 Hexo 博客根目录 `[blog]`下打开终端，输入
+
+   ```bash
+   hexo new page equipment
+   ```
+
+3. 你会找到 `source/equipment/index.md` 这个文件
+
+4. 修改这个文件：
+   记得添加 `type: "equipment"`
+    ```markdown
+    ---
+    title: 我的装备
+    date: 2023-06-10 21:33:24
+    type: equipment
+    aside: false
+    top_img: false
+    ---
+    ```
+
+5. 添加数据，新建文件`[blog]\source\_data\equipment.yml`,没有`_data`文件夹的话也请自己新建。以下是默认格式示例，打开`[blog]\source\_data\equipment.yml`，输入：
+```yml
+- class_name: 好物
+  description: 实物装备推荐
+  tip: 跟 安知鱼 一起享受科技带来的乐趣
+  top_background: https://bu.dusays.com/2023/07/05/64a4c38842b7a.webp
+  good_things:
+    - title: 生产力
+      description: 提升自己生产效率的硬件设备
+      equipment_list:
+        - name: MacBook Pro 2021 16 英寸
+          specification: M1 Max 64G / 1TB
+          description: 屏幕显示效果好、色彩准确、对比度强、性能强劲、续航优秀。可以用来开发和设计。
+          image: https://bu.dusays.com/2023/07/05/64a4c3b191e2e.png
+          link: /posts/571d.html
+        - name: iPad 2020
+          specification: 深空灰 / 128G
+          description: 事事玩得转，买前生产力，买后爱奇艺。
+          image: https://bu.dusays.com/2023/07/05/64a4c3b191e2e.png
+          link: https://www.apple.com.cn/ipad-10.2/
+        - name: iPhone 12 mini
+          specification: 绿色 / 128G
+          description: 超瓷晶面板，玻璃背板搭配铝金属边框，曲线优美的圆角设计，mini大小正好一只手就抓住，深得我心，唯一缺点大概就是续航不够。
+          image: https://bu.dusays.com/2023/07/05/64a4c3ded6319.webp
+          link: https://www.apple.com.cn/iphone-12/specs/
+        - name: AirPods（第三代）
+          specification: 标准版
+          description: 第三代对比第二代提升很大，和我一样不喜欢入耳式耳机的可以入，空间音频等功能确实新颖，第一次使用有被惊艳到。
+          image: https://bu.dusays.com/2023/07/05/64a4c3ded6319.webp
+          link: https://www.apple.com.cn/airpods-3rd-generation/
+    - title: 出行
+      description: 用来出行的实物及设备
+      equipment_list:
+        - name: Apple Watch Series 8
+          specification: 黑色
+          description: 始终为我的健康放哨，深夜弹出站立提醒，不过确实有效的提高了我的运动频率，配合apple全家桶还是非常棒的产品，缺点依然是续航。
+          image: https://bu.dusays.com/2023/07/05/64a4c40ab698a.webp
+          link: https://www.apple.com.cn/apple-watch-series-8/
+        - name: NATIONAL GEOGRAPHIC双肩包
+          specification: 黑色
+          description: 国家地理黑色大包，正好装下16寸 Macbook Pro，并且背起来很舒适，底部自带防雨罩也好用，各种奇怪的小口袋深得我心。
+          image: https://bu.dusays.com/2023/07/05/64a4c40ab698a.webp
+          link: https://item.jd.com/100011269828.html
+        - name: NATIONAL GEOGRAPHIC学生书包🎒
+          specification: 红白色
+          description: 国家地理黑色大包，冰冰🧊同款，颜值在线且实用。
+          image: https://bu.dusays.com/2023/07/05/64a4c40ab698a.webp
+          link: https://item.jd.com/100005889786.html
+```
+
+主题配置文件中开启`menu`中关于和我的装备的注释，导航栏我的装备，注意缩进！！！
+
+```yml
+menu:
+  # 文章:
+  #   隧道: /archives/ || anzhiyu-icon-box-archive
+  #   分类: /categories/ || anzhiyu-icon-shapes
+  #   标签: /tags/ || anzhiyu-icon-tags
+
+  # 友链:
+  #   友人帐: /link/ || anzhiyu-icon-link
+  #   朋友圈: /fcircle/ || anzhiyu-icon-artstation
+  #   留言板: /comments/ || anzhiyu-icon-envelope
+
+  # 我的:
+  #   音乐馆: /music/ || anzhiyu-icon-music
+  #   追番页: /bangumis/ || anzhiyu-icon-bilibili
+  #   相册集: /album/ || anzhiyu-icon-images
+  #   小空调: /air-conditioner/ || anzhiyu-icon-fan
+
+  关于:
+    #   关于本人: /about/ || anzhiyu-icon-paper-plane
+    #   闲言碎语: /essay/ || anzhiyu-icon-lightbulb
+    #   随便逛逛: javascript:toRandomPost() || anzhiyu-icon-shoe-prints1
+    我的装备: /equipment/ || anzhiyu-icon-dice-d20
+```
+
+::: warning 警告
+示例数据中的图片不保证可用性，请自行更换为您自己的图床链接。图床相关知识=>[我的图床方案](https://blog.anheyu.com/posts/2785.html)
+:::

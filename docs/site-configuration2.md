@@ -5,8 +5,8 @@ description: 安知鱼主题站点基础配置
 ---
 
 ::: warning 警告
-本教程更新于 2023 年 5 月 22 日，教程的内容针对最新的 anzhiyu 主题(如果你是旧版本，教程会有出入，请留意)
-🐟 安知鱼 已经更新到 [1.2.1](https://github.com/anzhiyu-c/hexo-theme-anzhiyu/releases/tag/1.2.1)
+本教程更新于 2023 年 7 月 5 日，教程的内容针对最新的 anzhiyu 主题(如果你是旧版本，教程会有出入，请留意)
+🐟 安知鱼 已经更新到 [1.4.0](https://github.com/anzhiyu-c/hexo-theme-anzhiyu/releases/tag/1.4.0)
 :::
 
 ## Footer 设置
@@ -34,7 +34,7 @@ footer:
     - link: https://hexo.io/ #徽标指向网站链接
       shields: https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg #徽标API
       message: 博客框架为Hexo_v5.4.0 #徽标提示语
-    - link: https://anheyu.com/
+    - link: https://blog.anheyu.com/
       shields: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg
       message: 本站使用AnZhiYu主题
     - link: https://www.dogecloud.com/
